@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsFactura" targetNamespace="http://tempuri.org/DsFactura.xsd" xmlns:mstns="http://tempuri.org/DsFactura.xsd" xmlns="http://tempuri.org/DsFactura.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsFactura" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsFactura" msprop:Generator_UserDSName="DsFactura">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FACTURATRAMITE" msprop:Generator_TableClassName="FACTURATRAMITEDataTable" msprop:Generator_TableVarName="tableFACTURATRAMITE" msprop:Generator_TablePropName="FACTURATRAMITE" msprop:Generator_RowDeletingName="FACTURATRAMITERowDeleting" msprop:Generator_RowChangingName="FACTURATRAMITERowChanging" msprop:Generator_RowEvHandlerName="FACTURATRAMITERowChangeEventHandler" msprop:Generator_RowDeletedName="FACTURATRAMITERowDeleted" msprop:Generator_UserTableName="FACTURATRAMITE" msprop:Generator_RowChangedName="FACTURATRAMITERowChanged" msprop:Generator_RowEvArgName="FACTURATRAMITERowChangeEvent" msprop:Generator_RowClassName="FACTURATRAMITERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FT_NUMERO" msprop:Generator_ColumnVarNameInTable="columnFT_NUMERO" msprop:Generator_ColumnPropNameInRow="FT_NUMERO" msprop:Generator_ColumnPropNameInTable="FT_NUMEROColumn" msprop:Generator_UserColumnName="FT_NUMERO" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_FECHA" msprop:Generator_ColumnVarNameInTable="columnFT_FECHA" msprop:Generator_ColumnPropNameInRow="FT_FECHA" msprop:Generator_ColumnPropNameInTable="FT_FECHAColumn" msprop:Generator_UserColumnName="FT_FECHA" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_PLACA" msprop:Generator_ColumnVarNameInTable="columnFT_PLACA" msprop:Generator_ColumnPropNameInRow="FT_PLACA" msprop:Generator_ColumnPropNameInTable="FT_PLACAColumn" msprop:Generator_UserColumnName="FT_PLACA" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_IDENTIFICACION_PROPI" msprop:Generator_ColumnVarNameInTable="columnFT_IDENTIFICACION_PROPI" msprop:Generator_ColumnPropNameInRow="FT_IDENTIFICACION_PROPI" msprop:Generator_ColumnPropNameInTable="FT_IDENTIFICACION_PROPIColumn" msprop:Generator_UserColumnName="FT_IDENTIFICACION_PROPI" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_PROPIETARIO_NOMBRE" msprop:Generator_ColumnVarNameInTable="columnFT_PROPIETARIO_NOMBRE" msprop:Generator_ColumnPropNameInRow="FT_PROPIETARIO_NOMBRE" msprop:Generator_ColumnPropNameInTable="FT_PROPIETARIO_NOMBREColumn" msprop:Generator_UserColumnName="FT_PROPIETARIO_NOMBRE" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_PROPIETARIO_APELLIDO" msprop:Generator_ColumnVarNameInTable="columnFT_PROPIETARIO_APELLIDO" msprop:Generator_ColumnPropNameInRow="FT_PROPIETARIO_APELLIDO" msprop:Generator_ColumnPropNameInTable="FT_PROPIETARIO_APELLIDOColumn" msprop:Generator_UserColumnName="FT_PROPIETARIO_APELLIDO" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_VALOR" msprop:Generator_ColumnVarNameInTable="columnFT_VALOR" msprop:Generator_ColumnPropNameInRow="FT_VALOR" msprop:Generator_ColumnPropNameInTable="FT_VALORColumn" msprop:Generator_UserColumnName="FT_VALOR" type="xs:string" minOccurs="0" />
+              <xs:element name="FT_DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnFT_DESCRIPCION" msprop:Generator_ColumnPropNameInRow="FT_DESCRIPCION" msprop:Generator_ColumnPropNameInTable="FT_DESCRIPCIONColumn" msprop:Generator_UserColumnName="FT_DESCRIPCION" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

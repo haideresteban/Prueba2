@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02EC4AF5-4329-428A-8DE8-2FECD45DEA98}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Prueba2</RootNamespace>
+    <AssemblyName>Prueba2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controlador\ControllerAsociarPropietario.cs" />
+    <Compile Include="Controlador\ControllerPropietario.cs" />
+    <Compile Include="Controlador\ControllerTramite.cs" />
+    <Compile Include="Controlador\ControllerVehiculo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\ClaseVehiculo.cs" />
+    <Compile Include="Modelo\DatosPropietarioVehiculo.cs" />
+    <Compile Include="Modelo\DatosTramite.cs" />
+    <Compile Include="Modelo\DatosVehiculo.cs" />
+    <Compile Include="Modelo\Factura.cs" />
+    <Compile Include="Modelo\Linea.cs" />
+    <Compile Include="Modelo\Marca.cs" />
+    <Compile Include="Modelo\PropietarioVehiculo.cs" />
+    <Compile Include="Modelo\TipoServicio.cs" />
+    <Compile Include="Modelo\Tramite.cs" />
+    <Compile Include="Modelo\Vehiculo.cs" />
+    <Compile Include="PRUEBA1DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PRUEBA1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Facturacion\CGenerarReporteFacturacion.cs" />
+    <Compile Include="Reporte\Facturacion\CrFcaturacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrFcaturacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\Facturacion\DsFcaturacionxsd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFcaturacionxsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Facturacion\fVerReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Facturacion\fVerReporte.Designer.cs">
+      <DependentUpon>fVerReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\FacturaTramite\CGgenerarFacturaTramite.cs" />
+    <Compile Include="Reporte\FacturaTramite\CrFacturaTramite.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrFacturaTramite.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\FacturaTramite\DsFacturaTramite.cs">
+      <DependentUpon>DsFacturaTramite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\FacturaTramite\DsFacturaTramite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFacturaTramite.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\FacturaTramite\frmFacturaTramite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\FacturaTramite\frmFacturaTramite.Designer.cs">
+      <DependentUpon>frmFacturaTramite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Factura\CgGenerarFacturaT.cs" />
+    <Compile Include="Reporte\Factura\CrFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reporte\Factura\DsFactura.cs">
+      <DependentUpon>DsFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Factura\DsFactura.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsFactura.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Factura\frmGenerarFacturaT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Factura\frmGenerarFacturaT.Designer.cs">
+      <DependentUpon>frmGenerarFacturaT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\eliminarPropetario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\eliminarPropetario.Designer.cs">
+      <DependentUpon>eliminarPropetario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAgregar.Designer.cs">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Conexion.cs" />
+    <Compile Include="Modelo\DatosPropietario.cs" />
+    <Compile Include="Modelo\Propietario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmAgregarVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAgregarVehiculo.Designer.cs">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAsociar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAsociar.Designer.cs">
+      <DependentUpon>frmAsociar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmAsociarVehiculoxPropie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAsociarVehiculoxPropie.Designer.cs">
+      <DependentUpon>frmAsociarVehiculoxPropie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmEditarPropietario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmEditarPropietario.Designer.cs">
+      <DependentUpon>frmEditarPropietario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmFacturacion.Designer.cs">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmListarPropietarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmListarPropietarios.Designer.cs">
+      <DependentUpon>frmListarPropietarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmListarVehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmListarVehiculos.Designer.cs">
+      <DependentUpon>frmListarVehiculos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Facturacion\CrFcaturacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrFcaturacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Facturacion\fVerReporte.resx">
+      <DependentUpon>fVerReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\FacturaTramite\CrFacturaTramite.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrFacturaTramite.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\FacturaTramite\frmFacturaTramite.resx">
+      <DependentUpon>frmFacturaTramite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Factura\CrFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrFactura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Factura\frmGenerarFacturaT.resx">
+      <DependentUpon>frmGenerarFacturaT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\eliminarPropetario.resx">
+      <DependentUpon>eliminarPropetario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAgregar.resx">
+      <DependentUpon>frmAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmAgregarVehiculo.resx">
+      <DependentUpon>frmAgregarVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAsociar.resx">
+      <DependentUpon>frmAsociar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAsociarVehiculoxPropie.resx">
+      <DependentUpon>frmAsociarVehiculoxPropie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmEditarPropietario.resx">
+      <DependentUpon>frmEditarPropietario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmFacturacion.resx">
+      <DependentUpon>frmFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmListarPropietarios.resx">
+      <DependentUpon>frmListarPropietarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmListarVehiculos.resx">
+      <DependentUpon>frmListarVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="PRUEBA1DataSet.xsc">
+      <DependentUpon>PRUEBA1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PRUEBA1DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PRUEBA1DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PRUEBA1DataSet.xss">
+      <DependentUpon>PRUEBA1DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\Facturacion\DsFcaturacionxsd.xsc">
+      <DependentUpon>DsFcaturacionxsd.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\Facturacion\DsFcaturacionxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFcaturacionxsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\Facturacion\DsFcaturacionxsd.xss">
+      <DependentUpon>DsFcaturacionxsd.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\FacturaTramite\DsFacturaTramite.xsc">
+      <DependentUpon>DsFacturaTramite.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\FacturaTramite\DsFacturaTramite.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFacturaTramite.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\FacturaTramite\DsFacturaTramite.xss">
+      <DependentUpon>DsFacturaTramite.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\Factura\DsFactura.xsc">
+      <DependentUpon>DsFactura.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\Factura\DsFactura.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsFactura.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reporte\Factura\DsFactura.xss">
+      <DependentUpon>DsFactura.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-vehiculo-png-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\306232.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\auto-1941991_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\el-CFDI-3.3-I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-editar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar-usuario-con-corbata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disquete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signo-mas-para-agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-atras.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

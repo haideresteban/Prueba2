@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsFacturaTramite" targetNamespace="http://tempuri.org/DsFacturaTramite.xsd" xmlns:mstns="http://tempuri.org/DsFacturaTramite.xsd" xmlns="http://tempuri.org/DsFacturaTramite.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsFacturaTramite" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsFacturaTramite" msprop:Generator_UserDSName="DsFacturaTramite">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PROPIETARIO" msprop:Generator_TableClassName="PROPIETARIODataTable" msprop:Generator_TableVarName="tablePROPIETARIO" msprop:Generator_TablePropName="PROPIETARIO" msprop:Generator_RowDeletingName="PROPIETARIORowDeleting" msprop:Generator_RowChangingName="PROPIETARIORowChanging" msprop:Generator_RowEvHandlerName="PROPIETARIORowChangeEventHandler" msprop:Generator_RowDeletedName="PROPIETARIORowDeleted" msprop:Generator_UserTableName="PROPIETARIO" msprop:Generator_RowChangedName="PROPIETARIORowChanged" msprop:Generator_RowEvArgName="PROPIETARIORowChangeEvent" msprop:Generator_RowClassName="PROPIETARIORow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P_NUMEROIDENTIFICACION" msprop:Generator_ColumnVarNameInTable="columnP_NUMEROIDENTIFICACION" msprop:Generator_ColumnPropNameInRow="P_NUMEROIDENTIFICACION" msprop:Generator_ColumnPropNameInTable="P_NUMEROIDENTIFICACIONColumn" msprop:Generator_UserColumnName="P_NUMEROIDENTIFICACION" type="xs:string" minOccurs="0" />
+              <xs:element name="P_NOMBRES" msprop:Generator_ColumnVarNameInTable="columnP_NOMBRES" msprop:Generator_ColumnPropNameInRow="P_NOMBRES" msprop:Generator_ColumnPropNameInTable="P_NOMBRESColumn" msprop:Generator_UserColumnName="P_NOMBRES" type="xs:string" minOccurs="0" />
+              <xs:element name="P_APELLIDOS" msprop:Generator_ColumnVarNameInTable="columnP_APELLIDOS" msprop:Generator_ColumnPropNameInRow="P_APELLIDOS" msprop:Generator_ColumnPropNameInTable="P_APELLIDOSColumn" msprop:Generator_UserColumnName="P_APELLIDOS" type="xs:string" minOccurs="0" />
+              <xs:element name="P_DIRECCION" msprop:Generator_ColumnVarNameInTable="columnP_DIRECCION" msprop:Generator_ColumnPropNameInRow="P_DIRECCION" msprop:Generator_ColumnPropNameInTable="P_DIRECCIONColumn" msprop:Generator_UserColumnName="P_DIRECCION" type="xs:string" minOccurs="0" />
+              <xs:element name="P_TELEFONO" msprop:Generator_ColumnVarNameInTable="columnP_TELEFONO" msprop:Generator_ColumnPropNameInRow="P_TELEFONO" msprop:Generator_ColumnPropNameInTable="P_TELEFONOColumn" msprop:Generator_UserColumnName="P_TELEFONO" type="xs:string" minOccurs="0" />
+              <xs:element name="P_CORREOELECTRONICO" msprop:Generator_ColumnVarNameInTable="columnP_CORREOELECTRONICO" msprop:Generator_ColumnPropNameInRow="P_CORREOELECTRONICO" msprop:Generator_ColumnPropNameInTable="P_CORREOELECTRONICOColumn" msprop:Generator_UserColumnName="P_CORREOELECTRONICO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
