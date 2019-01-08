@@ -37,9 +37,10 @@
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionDeVhiculosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asociarVehiculosYPropietariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fcaturacionDeTramitesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fcaturacionDeTramitesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,13 +56,15 @@
             this.gestionDeVhiculosToolStripMenuItem,
             this.asociarVehiculosYPropietariosToolStripMenuItem,
             this.fcaturacionDeTramitesToolStripMenuItem,
-            this.reporteToolStripMenuItem,
-            this.facturaToolStripMenuItem});
+            this.buscarFacturasToolStripMenuItem,
+            this.facturaToolStripMenuItem,
+            this.reporteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(919, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1018, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // gestiónDePropietariosToolStripMenuItem
             // 
@@ -111,14 +114,6 @@
             this.asociarVehiculosYPropietariosToolStripMenuItem.Text = "Asociar Vehiculos y Propietarios";
             this.asociarVehiculosYPropietariosToolStripMenuItem.Click += new System.EventHandler(this.asociarVehiculosYPropietariosToolStripMenuItem_Click);
             // 
-            // fcaturacionDeTramitesToolStripMenuItem
-            // 
-            this.fcaturacionDeTramitesToolStripMenuItem.Image = global::Prueba2.Properties.Resources.invoice;
-            this.fcaturacionDeTramitesToolStripMenuItem.Name = "fcaturacionDeTramitesToolStripMenuItem";
-            this.fcaturacionDeTramitesToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
-            this.fcaturacionDeTramitesToolStripMenuItem.Text = "Facturacion de tramites";
-            this.fcaturacionDeTramitesToolStripMenuItem.Click += new System.EventHandler(this.fcaturacionDeTramitesToolStripMenuItem_Click);
-            // 
             // reporteToolStripMenuItem
             // 
             this.reporteToolStripMenuItem.Image = global::Prueba2.Properties.Resources.el_CFDI_3_3_I;
@@ -127,6 +122,14 @@
             this.reporteToolStripMenuItem.Text = "Ejemplo";
             this.reporteToolStripMenuItem.Click += new System.EventHandler(this.reporteToolStripMenuItem_Click);
             // 
+            // fcaturacionDeTramitesToolStripMenuItem
+            // 
+            this.fcaturacionDeTramitesToolStripMenuItem.Image = global::Prueba2.Properties.Resources.invoice;
+            this.fcaturacionDeTramitesToolStripMenuItem.Name = "fcaturacionDeTramitesToolStripMenuItem";
+            this.fcaturacionDeTramitesToolStripMenuItem.Size = new System.Drawing.Size(159, 20);
+            this.fcaturacionDeTramitesToolStripMenuItem.Text = "Facturacion de tramites";
+            this.fcaturacionDeTramitesToolStripMenuItem.Click += new System.EventHandler(this.fcaturacionDeTramitesToolStripMenuItem_Click);
+            // 
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
@@ -134,11 +137,18 @@
             this.facturaToolStripMenuItem.Text = "Reporte propietarios";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
+            // buscarFacturasToolStripMenuItem
+            // 
+            this.buscarFacturasToolStripMenuItem.Name = "buscarFacturasToolStripMenuItem";
+            this.buscarFacturasToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.buscarFacturasToolStripMenuItem.Text = "Buscar Facturas";
+            this.buscarFacturasToolStripMenuItem.Click += new System.EventHandler(this.buscarFacturasToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 357);
+            this.ClientSize = new System.Drawing.Size(1018, 357);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -166,5 +176,6 @@
         private System.Windows.Forms.ToolStripMenuItem fcaturacionDeTramitesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarFacturasToolStripMenuItem;
     }
 }

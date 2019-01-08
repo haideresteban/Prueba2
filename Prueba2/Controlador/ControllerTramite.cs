@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using Prueba2.Modelo;
 
@@ -45,4 +46,40 @@ public class ControllerTramite
         this.error = objDatosTramite.Error;
         return agrega;
     }
+    //public DataTable FacturaByTramite(string placa)
+    //{
+    //    this.error = "";
+    //    DataTable DT = objDatosTramite.FacturaByTramite(placa);
+    //    this.error = objDatosTramite.Error;
+    //    return DT;
+    //}
+    public DataTable FacturaByPlaca(string placa)
+    {
+        this.error = "";
+        DataTable DT = objDatosTramite.FacturaByPlaca(placa);
+        this.error = objDatosTramite.Error;
+        return DT;
+    }
+    public DataTable FacturaByIdentificacion(string identificacion)
+    {
+        this.error = "";
+        DataTable DT = objDatosTramite.FacturaByIdentificacion(identificacion);
+        this.error = objDatosTramite.Error;
+        return DT;
+    }
+    public DataTable FacturaByRangoFechas(string fechaIni, string fechaFin)
+    {
+        this.error = "";
+        DataTable DT = objDatosTramite.facturaByRangoFechas(fechaIni,fechaFin);
+        this.error = objDatosTramite.Error;
+        return DT;
+    }
+    public Factura FacturaByNumeroF(string numeroFactura)
+    {
+        this.error = "";
+        Factura factura = objDatosTramite.facturaByNumeroF(numeroFactura);
+        this.error = objDatosTramite.Error;
+        return factura;
+    }
+
 }

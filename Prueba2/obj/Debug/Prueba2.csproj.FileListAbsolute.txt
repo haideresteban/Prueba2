@@ -57,3 +57,5 @@ C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.pdb
 C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.csprojResolveAssemblyReference.cache
 C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.Reporte.FacturaTramite.frmFacturaTramite.resources
 C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.Reporte.Factura.frmGenerarFacturaT.resources
+C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.Vista.frmBuscarFactura.resources
+C:\Users\USUARIO-02\Documents\Curso c#\Prueba2\Prueba2\obj\Debug\Prueba2.Vista.detalleFactura.resources

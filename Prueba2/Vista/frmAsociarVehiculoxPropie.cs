@@ -107,5 +107,10 @@ namespace Prueba2.Vista
         {
 
         }
+
+        private void gridPropietarioPorPlaca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

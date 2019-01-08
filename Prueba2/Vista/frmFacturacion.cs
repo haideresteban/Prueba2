@@ -148,5 +148,15 @@ namespace Prueba2.Vista
         {
           
         }
+
+        private void contaioner_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

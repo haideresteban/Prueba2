@@ -144,6 +144,12 @@
     <Compile Include="Reporte\Factura\frmGenerarFacturaT.Designer.cs">
       <DependentUpon>frmGenerarFacturaT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\detalleFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\detalleFactura.Designer.cs">
+      <DependentUpon>detalleFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\eliminarPropetario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Compile>
     <Compile Include="Vista\frmAsociarVehiculoxPropie.Designer.cs">
       <DependentUpon>frmAsociarVehiculoxPropie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmBuscarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmBuscarFactura.Designer.cs">
+      <DependentUpon>frmBuscarFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmEditarPropietario.cs">
       <SubType>Form</SubType>
@@ -227,6 +239,9 @@
     <EmbeddedResource Include="Reporte\Factura\frmGenerarFacturaT.resx">
       <DependentUpon>frmGenerarFacturaT.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\detalleFactura.resx">
+      <DependentUpon>detalleFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\eliminarPropetario.resx">
       <DependentUpon>eliminarPropetario.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmAsociarVehiculoxPropie.resx">
       <DependentUpon>frmAsociarVehiculoxPropie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmBuscarFactura.resx">
+      <DependentUpon>frmBuscarFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmEditarPropietario.resx">
       <DependentUpon>frmEditarPropietario.cs</DependentUpon>
@@ -371,6 +389,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flecha-atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

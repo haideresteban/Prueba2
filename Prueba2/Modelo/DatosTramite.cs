@@ -17,7 +17,6 @@ namespace Prueba2.Modelo
         public SqlTransaction transaccion;
         private string error;
 
-
         public string Error
         {
             get { return error; }
@@ -125,8 +124,117 @@ namespace Prueba2.Modelo
             return agregado;
 
               }
-       
+
+        public DataTable FacturaByPlaca(string placa)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = this.conexion;
+            String SQL =
+                "select f.NUMERO AS FACTURA, f.FECHA, v.PLACA "+
+               "from FACTURA f INNER JOIN VEHICULO v ON (f.ID_VEHICULO = v.ID) "+
+               "WHERE v.PLACA = '" + @placa + "'";
+            comando.CommandText = SQL;
+            try
+            {
+                SqlDataReader registro = comando.ExecuteReader();
+                DataTable DT = new DataTable();
+                DT.Load(registro);
+                registro.Close();
+                return DT;
+            }
+            catch (SqlException ex)
+            {
+                this.error = ex.Message;
+            }
+            return new DataTable();
+        }
+        public DataTable FacturaByIdentificacion(string identificacion)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = this.conexion;
+            String SQL =
+               "select f.NUMERO AS FACTURA, f.FECHA, v.PLACA, PROPIETARIO.NUMEROIDENTIFICACION AS IDENTIFICACION "+
+                "from FACTURA f "+
+                "INNER JOIN VEHICULO v ON(f.ID_VEHICULO = v.ID) "+
+                "INNER JOIN PROPIETARIO_VEHICULO pv ON(v.ID = pv.ID_VEHICULO) "+
+                "inner JOIN PROPIETARIO on (pv.ID_PROPIETARIO = PROPIETARIO.ID) "+
+                "WHERE PROPIETARIO.NUMEROIDENTIFICACION = '"+ identificacion+"'";
+            comando.CommandText = SQL;
+            try
+            {
+                SqlDataReader registro = comando.ExecuteReader();
+                DataTable DT = new DataTable();
+                DT.Load(registro);
+                registro.Close();
+                return DT;
+            }
+            catch (SqlException ex)
+            {
+                this.error = ex.Message;
+            }
+            return new DataTable();
+
+
+
+        }
+        public DataTable facturaByRangoFechas(string fechaIni, string FechaFin)
+        {
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = this.conexion;
+            String SQL =
+               "select f.NUMERO AS FACTURA, f.FECHA, v.PLACA " +
+                "from FACTURA f " +
+                "INNER JOIN VEHICULO v ON(f.ID_VEHICULO = v.ID) " +
+                "WHERE f.FECHA >= '"+fechaIni+"' AND f.FECHA <= '"+FechaFin+"'";
+            comando.CommandText = SQL;
+            try
+            {
+                SqlDataReader registro = comando.ExecuteReader();
+                DataTable DT = new DataTable();
+                DT.Load(registro);
+                registro.Close();
+                return DT;
+            }
+            catch (SqlException ex)
+            {
+                this.error = ex.Message;
+            }
+            return new DataTable();
+        }
+        public Factura facturaByNumeroF(string numeroFactura)
+        {
+
+            this.error = "";
+            Factura unaFactura = null;
+            SqlCommand comando = new SqlCommand();
+            comando.Connection = this.conexion;
+            comando.CommandText = "select * from FACTURA WHERE FACTURA.NUMERO=" + numeroFactura;
+            try
+            {
+                SqlDataReader registro = comando.ExecuteReader();
+                if (registro.Read())
+                {
+                    unaFactura = new Factura();
+                    unaFactura.id = Convert.ToInt32(registro.GetDecimal(0));
+                    unaFactura.numero = registro.GetString(1);
+                    unaFactura.fecha = Convert.ToDateTime( registro.GetDateTime(2));
+                    unaFactura.idVehiculo = Convert.ToDecimal(registro.GetDecimal(3));
+                    unaFactura.observaciones = unaFactura.numero = registro.GetString(4);
+                }
+                registro.Close();
+            }
+            catch (SqlException ex)
+            {
+                this.error = ex.Message;
+            }
+            return unaFactura;
+
+        }
+
+
     }
+  
+    
 }
 
 

@@ -101,6 +101,7 @@
             this.gridPropietarioPorPlaca.Name = "gridPropietarioPorPlaca";
             this.gridPropietarioPorPlaca.Size = new System.Drawing.Size(654, 110);
             this.gridPropietarioPorPlaca.TabIndex = 3;
+            this.gridPropietarioPorPlaca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridPropietarioPorPlaca_CellContentClick);
             // 
             // btnAgregar
             // 
